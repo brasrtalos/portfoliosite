@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Bruno Silveira</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: #0078D7;
+            color: #fff;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .menu {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .menu .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 2px 0;
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .dropdown a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            font-size: 1rem;
+        }
+
+        .dropdown a:hover {
+            background-color: #0078D7;
+        }
+
+        .menu.active .dropdown {
+            display: block;
+        }
+
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="page-title">Bruno Silveira</h1>
+        <div class="menu" onclick="toggleMenu()">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <div class="dropdown">
+                <a href="#" onclick="changeLanguage('pt')">Português</a>
+                <a href="#" onclick="changeLanguage('en')">English</a>
+                <a href="#" onclick="changeLanguage('es')">Español</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h2 id="intro-text">Bem-vindo ao meu portfólio</h2>
+        <p id="description-text">Desenvolvedor e estudante de Engenharia da Computação.</p>
+    </section>
+
+    <footer>
+        <p id="footer-text">&copy; 2025 Portfólio de Bruno. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Traduções
+        const translations = {
+            pt: {
+                title: "Portfólio de Bruno Silveira",
+                introText: "Bem-vindo ao meu portfólio",
+                descriptionText: "Desenvolvedor e estudante de Engenharia da Computação.",
+                footerText: "&copy; 2025 Portfólio de Bruno. Todos os direitos reservados."
+            },
+            en: {
+                title: "Bruno Silveira's Portfolio",
+                introText: "Welcome to my portfolio",
+                descriptionText: "Developer and Computer Engineering student.",
+                footerText: "&copy; 2025 Bruno's Portfolio. All rights reserved."
+            },
+            es: {
+                title: "Portafolio de Bruno Silveira",
+                introText: "Bienvenido a mi portafolio",
+                descriptionText: "Desarrollador y estudiante de Ingeniería en Computación.",
+                footerText: "&copy; 2025 Portafolio de Bruno. Todos los derechos reservados."
+            }
+        };
+
+        // Função para alterar o conteúdo da página baseado no idioma selecionado
+        function changeLanguage(language) {
+            const translation = translations[language];
+            
+            document.getElementById("page-title").textContent = translation.title;
+            document.getElementById("intro-text").textContent = translation.introText;
+            document.getElementById("description-text").textContent = translation.descriptionText;
+            document.getElementById("footer-text").innerHTML = translation.footerText;
+        }
+
+        // Função para alternar o menu de 3 pontos
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
