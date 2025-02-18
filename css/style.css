@@ -42,6 +42,51 @@ nav a:hover {
     border-bottom: 2px solid #00ffcc; /* Verde Neon */
 }
 
+.menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 2px 0;
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    font-size: 1rem;
+}
+
+.dropdown a:hover {
+    background-color: #0078D7;
+}
+
+.menu.active .dropdown {
+    display: block;
+}
+
+section {
+    padding: 20px;
+}
+
 /* Seções */
 main {
     max-width: 1200px;
