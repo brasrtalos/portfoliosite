@@ -3,95 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Bruno Silveira</title>
+    <title id="page-title">Portfólio de Bruno</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #1e1e1e;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 2rem;
-            background-color: #0078D7;
-            color: #fff;
-            align-items: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        .menu {
-            position: relative;
-            cursor: pointer;
-        }
-
-        .menu .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: white;
-            margin: 2px 0;
-            display: block;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 20px;
-            right: 0;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .dropdown a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 8px 12px;
-            font-size: 1rem;
-        }
-
-        .dropdown a:hover {
-            background-color: #0078D7;
-        }
-
-        .menu.active .dropdown {
-            display: block;
-        }
-
-        section {
-            padding: 20px;
-        }
-    </style>
 </head>
 <body>
-
     <header>
-        <h1 id="page-title">Bruno Silveira</h1>
-        <div class="menu" onclick="toggleMenu()">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <div class="dropdown">
-                <a href="#" onclick="changeLanguage('pt')">Português</a>
-                <a href="#" onclick="changeLanguage('en')">English</a>
-                <a href="#" onclick="changeLanguage('es')">Español</a>
+        <h1>Bruno Silveira</h1>
+        <nav>
+            <a href="pages/sobre.html">Sobre</a>
+            <a href="pages/projetos.html">Projetos</a>
+            <a href="pages/curriculo.html">Currículo</a>
+            <a href="pages/certificados.html">Certificados</a>
+            <div class="menu" onclick="toggleMenu()">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <div class="dropdown">
+                    <a href="#" onclick="changeLanguage('pt')">Português</a>
+                    <a href="#" onclick="changeLanguage('en')">English</a>
+                    <a href="#" onclick="changeLanguage('es')">Español</a>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <section>
-        <h2 id="intro-text">Bem-vindo ao meu portfólio</h2>
-        <p id="description-text">Desenvolvedor e estudante de Engenharia da Computação.</p>
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h2 id="intro-text">Bem-vindo ao Meu Portfólio</h2>
+            <p id="description-text">Desenvolvedor e estudante de Engenharia da Computação. Aqui você pode conhecer mais sobre mim e explorar meus projetos, currículos e certificados.</p>
+        </div>
+    </section>
+
+    <!-- Resumo sobre mim -->
+    <section id="resumo">
+        <h2 id="about-title">Sobre Mim</h2>
+        <p id="about-description">Olá! Meu nome é Bruno Silveira e sou apaixonado por tecnologia, especialmente na área de desenvolvimento web e engenharia da computação. Ao longo da minha carreira, desenvolvi habilidades práticas em programação, eletrônica e design de soluções inovadoras. Estou constantemente buscando aprender e expandir meus conhecimentos.</p>
+        <p id="about-link">Para mais detalhes sobre minha trajetória e experiência, confira a página <a href="pages/sobre.html">Sobre</a>.</p>
+    </section>
+
+    <!-- Resumo de Projetos -->
+    <section id="projetos-resumo">
+        <h2 id="projects-title">Meus Projetos</h2>
+        <p id="projects-description">Trabalhei em diversos projetos ao longo da minha jornada. Alguns dos mais interessantes incluem aplicativos web, sistemas de automação e plataformas interativas.</p>
+        <p id="projects-link">Veja mais sobre os meus projetos na página <a href="pages/projetos.html">Projetos</a>.</p>
+    </section>
+
+    <!-- Resumo de Currículo -->
+    <section id="curriculo-resumo">
+        <h2 id="resume-title">Currículo</h2>
+        <p id="resume-description">Com minha formação técnica e experiência prática, adquiri um conjunto de habilidades em desenvolvimento de software, sistemas embarcados e muito mais. Confira meu currículo completo e veja como posso contribuir para o seu projeto ou empresa.</p>
+        <p id="resume-link">Baixe ou veja mais detalhes na página <a href="pages/curriculo.html">Currículo</a>.</p>
+    </section>
+
+    <!-- Resumo de Certificados -->
+    <section id="certificados-resumo">
+        <h2 id="certificates-title">Certificados</h2>
+        <p id="certificates-description">Ao longo da minha formação e carreira, obtive diversos certificados que comprovam meu conhecimento e dedicação ao desenvolvimento contínuo.</p>
+        <p id="certificates-link">Veja mais detalhes sobre meus certificados na página <a href="pages/certificados.html">Certificados</a>.</p>
     </section>
 
     <footer>
@@ -103,40 +72,52 @@
         const translations = {
             pt: {
                 title: "Portfólio de Bruno Silveira",
-                introText: "Bem-vindo ao meu portfólio",
-                descriptionText: "Desenvolvedor e estudante de Engenharia da Computação.",
+                introText: "Bem-vindo ao Meu Portfólio",
+                descriptionText: "Desenvolvedor e estudante de Engenharia da Computação. Aqui você pode conhecer mais sobre mim e explorar meus projetos, currículos e certificados.",
+                aboutTitle: "Sobre Mim",
+                aboutDescription: "Olá! Meu nome é Bruno Silveira e sou apaixonado por tecnologia, especialmente na área de desenvolvimento web e engenharia da computação. Ao longo da minha carreira, desenvolvi habilidades práticas em programação, eletrônica e design de soluções inovadoras. Estou constantemente buscando aprender e expandir meus conhecimentos.",
+                aboutLink: "Para mais detalhes sobre minha trajetória e experiência, confira a página <a href='pages/sobre.html'>Sobre</a>.",
+                projectsTitle: "Meus Projetos",
+                projectsDescription: "Trabalhei em diversos projetos ao longo da minha jornada. Alguns dos mais interessantes incluem aplicativos web, sistemas de automação e plataformas interativas.",
+                projectsLink: "Veja mais sobre os meus projetos na página <a href='pages/projetos.html'>Projetos</a>.",
+                resumeTitle: "Currículo",
+                resumeDescription: "Com minha formação técnica e experiência prática, adquiri um conjunto de habilidades em desenvolvimento de software, sistemas embarcados e muito mais. Confira meu currículo completo e veja como posso contribuir para o seu projeto ou empresa.",
+                resumeLink: "Baixe ou veja mais detalhes na página <a href='pages/curriculo.html'>Currículo</a>.",
+                certificatesTitle: "Certificados",
+                certificatesDescription: "Ao longo da minha formação e carreira, obtive diversos certificados que comprovam meu conhecimento e dedicação ao desenvolvimento contínuo.",
+                certificatesLink: "Veja mais detalhes sobre meus certificados na página <a href='pages/certificados.html'>Certificados</a>.",
                 footerText: "&copy; 2025 Portfólio de Bruno. Todos os direitos reservados."
             },
             en: {
                 title: "Bruno Silveira's Portfolio",
-                introText: "Welcome to my portfolio",
-                descriptionText: "Developer and Computer Engineering student.",
+                introText: "Welcome to My Portfolio",
+                descriptionText: "Developer and Computer Engineering student. Here you can learn more about me and explore my projects, resumes, and certificates.",
+                aboutTitle: "About Me",
+                aboutDescription: "Hello! My name is Bruno Silveira and I am passionate about technology, especially in the field of web development and computer engineering.",
+                aboutLink: "For more details about my journey and experience, check the <a href='pages/sobre.html'>About</a> page.",
+                projectsTitle: "My Projects",
+                projectsDescription: "I've worked on several projects throughout my journey. Some of the most interesting include web applications, automation systems, and interactive platforms.",
+                projectsLink: "See more about my projects on the <a href='pages/projetos.html'>Projects</a> page.",
+                resumeTitle: "Resume",
+                resumeDescription: "With my technical training and practical experience, I've acquired a set of skills in software development, embedded systems, and much more.",
+                resumeLink: "Download or see more details on the <a href='pages/curriculo.html'>Resume</a> page.",
+                certificatesTitle: "Certificates",
+                certificatesDescription: "Throughout my education and career, I've obtained several certificates that prove my knowledge and dedication to continuous development.",
+                certificatesLink: "See more about my certificates on the <a href='pages/certificados.html'>Certificates</a> page.",
                 footerText: "&copy; 2025 Bruno's Portfolio. All rights reserved."
-            },
-            es: {
-                title: "Portafolio de Bruno Silveira",
-                introText: "Bienvenido a mi portafolio",
-                descriptionText: "Desarrollador y estudiante de Ingeniería en Computación.",
-                footerText: "&copy; 2025 Portafolio de Bruno. Todos los derechos reservados."
             }
         };
 
-        // Função para alterar o conteúdo da página baseado no idioma selecionado
-        function changeLanguage(language) {
-            const translation = translations[language];
-            
-            document.getElementById("page-title").textContent = translation.title;
-            document.getElementById("intro-text").textContent = translation.introText;
-            document.getElementById("description-text").textContent = translation.descriptionText;
-            document.getElementById("footer-text").innerHTML = translation.footerText;
+        function changeLanguage(lang) {
+            const content = translations[lang];
+            Object.keys(content).forEach(id => {
+                document.getElementById(id).innerHTML = content[id];
+            });
         }
 
-        // Função para alternar o menu de 3 pontos
         function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('active');
+            document.querySelector(".dropdown").classList.toggle("active");
         }
     </script>
-
 </body>
 </html>

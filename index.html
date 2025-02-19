@@ -3,59 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Bruno</title>
+    <title id="page-title">Portfólio de Bruno</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <h1>Bruno Silveira</h1>
         <nav>
-            <a href="pages/sobre.html">Sobre</a>
-            <a href="pages/projetos.html">Projetos</a>
-            <a href="pages/curriculo.html">Currículo</a>
-            <a href="pages/certificados.html">Certificados</a>
+            <a href="pages/sobre.html" id="about-link">Sobre</a>
+            <a href="pages/projetos.html" id="projects-link">Projetos</a>
+            <a href="pages/curriculo.html" id="resume-link">Currículo</a>
+            <a href="pages/certificados.html" id="certificates-link">Certificados</a>
+            <div class="menu" onclick="toggleMenu()">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <div class="dropdown">
+                    <a href="#" onclick="changeLanguage('pt')">Português</a>
+                    <a href="#" onclick="changeLanguage('en')">English</a>
+                    <a href="#" onclick="changeLanguage('es')">Español</a>
+                </div>
+            </div>
         </nav>        
     </header>
 
    <!-- Banner Section -->
    <section id="banner">
     <div class="banner-content">
-        <h2>Bem-vindo ao Meu Portfólio</h2>
-        <p>Desenvolvedor e estudante de Engenharia da Computação. Aqui você pode conhecer mais sobre mim e explorar meus projetos, currículos e certificados.</p>
+        <h2 id="intro-text">Bem-vindo ao Meu Portfólio</h2>
+        <p id="description-text">Desenvolvedor e estudante de Engenharia da Computação. Aqui você pode conhecer mais sobre mim e explorar meus projetos, currículos e certificados.</p>
     </div>
 </section>
 
 <!-- Resumo sobre mim -->
 <section id="resumo">
-    <h2>Sobre Mim</h2>
-    <p>Olá! Meu nome é Bruno Silveira e sou apaixonado por tecnologia, especialmente na área de desenvolvimento web e engenharia da computação. Ao longo da minha carreira, desenvolvi habilidades práticas em programação, eletrônica e design de soluções inovadoras. Estou constantemente buscando aprender e expandir meus conhecimentos.</p>
-    <p>Para mais detalhes sobre minha trajetória e experiência, confira a página <a href="pages/sobre.html">Sobre</a>.</p>
+    <h2 id="about-title">Sobre Mim</h2>
+    <p id="about-description">Olá! Meu nome é Bruno Silveira e sou apaixonado por tecnologia, especialmente na área de desenvolvimento web e engenharia da computação. Ao longo da minha carreira, desenvolvi habilidades práticas em programação, eletrônica e design de soluções inovadoras. Estou constantemente buscando aprender e expandir meus conhecimentos.</p>
+    <p id="about-more">Para mais detalhes sobre minha trajetória e experiência, confira a página <a href="pages/sobre.html">Sobre</a>.</p>
 </section>
 
 <!-- Resumo de Projetos -->
 <section id="projetos-resumo">
-    <h2>Meus Projetos</h2>
-    <p>Trabalhei em diversos projetos ao longo da minha jornada. Alguns dos mais interessantes incluem aplicativos web, sistemas de automação e plataformas interativas.</p>
-    <p>Veja mais sobre os meus projetos na página <a href="pages/projetos.html">Projetos</a>.</p>
+    <h2 id="projects-title">Meus Projetos</h2>
+    <p id="projects-description">Trabalhei em diversos projetos ao longo da minha jornada. Alguns dos mais interessantes incluem aplicativos web, sistemas de automação e plataformas interativas.</p>
+    <p id="projects-more">Veja mais sobre os meus projetos na página <a href="pages/projetos.html">Projetos</a>.</p>
 </section>
 
 <!-- Resumo de Currículo -->
 <section id="curriculo-resumo">
-    <h2>Currículo</h2>
-    <p>Com minha formação técnica e experiência prática, adquiri um conjunto de habilidades em desenvolvimento de software, sistemas embarcados e muito mais. Confira meu currículo completo e veja como posso contribuir para o seu projeto ou empresa.</p>
-    <p>Baixe ou veja mais detalhes na página <a href="pages/curriculo.html">Currículo</a>.</p>
+    <h2 id="resume-title">Currículo</h2>
+    <p id="resume-description">Com minha formação técnica e experiência prática, adquiri um conjunto de habilidades em desenvolvimento de software, sistemas embarcados e muito mais. Confira meu currículo completo e veja como posso contribuir para o seu projeto ou empresa.</p>
+    <p id="resume-more">Baixe ou veja mais detalhes na página <a href="pages/curriculo.html">Currículo</a>.</p>
 </section>
 
 <!-- Resumo de Certificados -->
 <section id="certificados-resumo">
-    <h2>Certificados</h2>
-    <p>Ao longo da minha formação e carreira, obtive diversos certificados que comprovam meu conhecimento e dedicação ao desenvolvimento contínuo.</p>
-    <p>Veja mais detalhes sobre meus certificados na página <a href="pages/certificados.html">Certificados</a>.</p>
+    <h2 id="certificates-title">Certificados</h2>
+    <p id="certificates-description">Ao longo da minha formação e carreira, obtive diversos certificados que comprovam meu conhecimento e dedicação ao desenvolvimento contínuo.</p>
+    <p id="certificates-more">Veja mais detalhes sobre meus certificados na página <a href="pages/certificados.html">Certificados</a>.</p>
 </section>
-    <footer>
-        <p>&copy; 2025 Portfólio de Bruno. Todos os direitos reservados.</p>
-    </footer>
 
-    <script src="js/script.js"></script>
+<footer>
+    <p id="footer-text">&copy; 2025 Portfólio de Bruno. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // Traduções
+    const translations = {
+        pt: {
+            title: "Portfólio de Bruno Silveira",
+            introText: "Bem-vindo ao meu portfólio",
+            descriptionText: "Desenvolvedor e estudante de Engenharia da Computação. Aqui você pode conhecer mais sobre mim e explorar meus projetos, currículos e certificados.",
+            aboutTitle: "Sobre Mim",
+            aboutDescription: "Olá! Meu nome é Bruno Silveira e sou apaixonado por tecnologia, especialmente na área de desenvolvimento web e engenharia da computação. Ao longo da minha carreira, desenvolvi habilidades práticas em programação, eletrônica e design de soluções inovadoras. Estou constantemente buscando aprender e expandir meus conhecimentos.",
+            aboutMore: "Para mais detalhes sobre minha trajetória e experiência, confira a página <a href='pages/sobre.html'>Sobre</a>.",
+            projectsTitle: "Meus Projetos",
+            projectsDescription: "Trabalhei em diversos projetos ao longo da minha jornada. Alguns dos mais interessantes incluem aplicativos web, sistemas de automação e plataformas interativas.",
+            projectsMore: "Veja mais sobre os meus projetos na página <a href='pages/projetos.html'>Projetos</a>.",
+            resumeTitle: "Currículo",
+            resumeDescription: "Com minha formação técnica e experiência prática, adquiri um conjunto de habilidades em desenvolvimento de software, sistemas embarcados e muito mais.",
+            resumeMore: "Baixe ou veja mais detalhes na página <a href='pages/curriculo.html'>Currículo</a>.",
+            certificatesTitle: "Certificados",
+            certificatesDescription: "Ao longo da minha formação e carreira, obtive diversos certificados que comprovam meu conhecimento e dedicação ao desenvolvimento contínuo.",
+            certificatesMore: "Veja mais detalhes sobre meus certificados na página <a href='pages/certificados.html'>Certificados</a>.",
+            footerText: "&copy; 2025 Portfólio de Bruno. Todos os direitos reservados."
+        },
+        en: {
+            title: "Bruno Silveira's Portfolio",
+            introText: "Welcome to my portfolio",
+            descriptionText: "Developer and Computer Engineering student. Here you can learn more about me and explore my projects, resumes, and certificates.",
+            aboutTitle: "About Me",
+            aboutDescription: "Hello! My name is Bruno Silveira, and I am passionate about technology, especially in web development and computer engineering.",
+            aboutMore: "For more details about my journey and experience, check out the <a href='pages/sobre.html'>About</a> page.",
+            projectsTitle: "My Projects",
+            projectsDescription: "I have worked on several projects, including web applications, automation systems, and interactive platforms.",
+            projectsMore: "See more about my projects on the <a href='pages/projetos.html'>Projects</a> page.",
+            resumeTitle: "Resume",
+            resumeDescription: "With my technical background and practical experience, I have developed a range of skills in software development and embedded systems.",
+            resumeMore: "Download or view more details on the <a href='pages/curriculo.html'>Resume</a> page.",
+            certificatesTitle: "Certificates",
+            certificatesDescription: "Throughout my education and career, I have earned several certificates proving my knowledge and continuous learning.",
+            certificatesMore: "See more details on the <a href='pages/certificados.html'>Certificates</a> page.",
+            footerText: "&copy; 2025 Bruno's Portfolio. All rights reserved."
+        },
+        es: {
+            title: "Portafolio de Bruno Silveira",
+            introText: "Bienvenido a mi portafolio",
+            descriptionText: "Desarrollador y estudiante de Ingeniería en Computación. Aquí puedes conocer más sobre mí y explorar mis proyectos, currículums y certificados.",
+            aboutTitle: "Sobre Mí",
+            aboutDescription: "¡Hola! Mi nombre es Bruno Silveira y me apasiona la tecnología, especialmente el desarrollo web y la ingeniería en computación.",
+            aboutMore: "Para más detalles sobre mi trayectoria y experiencia, visita la página <a href='pages/sobre.html'>Sobre Mí</a>.",
+            projectsTitle: "Mis Proyectos",
+            projectsDescription: "He trabajado en varios proyectos, incluyendo aplicaciones web, sistemas de automatización y plataformas interactivas.",
+            projectsMore: "Consulta más detalles sobre mis proyectos en la página <a href='pages/projetos.html'>Proyectos</a>.",
+            resumeTitle: "Currículum",
+            resumeDescription: "Con mi formación técnica y experiencia práctica, he desarrollado una variedad de habilidades en desarrollo de software y sistemas embebidos.",
+            resumeMore: "Descarga o consulta más detalles en la página <a href='pages/curriculo.html'>Currículum</a>.",
+            certificatesTitle: "Certificados",
+            certificatesDescription: "A lo largo de mi formación y carrera, he obtenido diversos certificados que acreditan mi conocimiento y aprendizaje continuo.",
+            certificatesMore: "Consulta más detalles sobre mis certificados en la página <a href='pages/certificados.html'>Certificados</a>.",
+            footerText: "&copy; 2025 Portafolio de Bruno. Todos los derechos reservados."
+
+        }
+    };
+
+   // Função para alterar o conteúdo da página baseado no idioma selecionado
+   function changeLanguage(language) {
+            const translation = translations[language];
+            
+            document.getElementById("page-title").textContent = translation.title;
+            document.getElementById("intro-text").textContent = translation.introText;
+            document.getElementById("description-text").textContent = translation.descriptionText;
+            document.getElementById("footer-text").innerHTML = translation.footerText;
+        }
+
+        // Função para alternar o menu de 3 pontos
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
